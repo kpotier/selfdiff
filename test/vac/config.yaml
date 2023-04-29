@@ -1,0 +1,43 @@
+# traj is the file containing the configurations
+traj: traj.lammpstrj
+
+# type is the type of trajectory (e.g: lammpstrj)
+type: lammpstrj
+
+# method is the method of calculation
+method: vac
+
+# pbc specifies if the periodic boundary conditions are used in the above file
+pbc: true
+
+# start is the first configuration that will be read. It must start be greater or equal to 0
+start: 300
+
+# end is the last configuration that will be read. It means that if end =
+# 1000, the 1000th configuration will be read
+end: 6000
+
+# mem is the number of configurations that will be put in memory. If it is
+# set to 3, the last 3 configurations will be put in memory (the most used)
+mem: 5700
+
+# mol is the number of molecules in one configuration
+mol: 1500
+
+# at is the number of atoms in one molecule
+at: 3
+
+# masses are the masses of each atoms in one molecule
+masses:
+    - 15.999
+    - 1.008
+    - 1.008
+
+# msdDist is the largest distance between two atoms in one molecule
+msdDist:
+    - 9.8
+    - 9.8
+    - 9.8
+
+# dt is the timestep in whatever unit you want
+dt: 2
